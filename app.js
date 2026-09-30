@@ -1,3 +1,5 @@
+/* FCU_READY_BOOTSTRAP */
+Promise.resolve(window.FCU_READY).then(()=>{
 'use strict';
 const $=id=>document.getElementById(id),esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const norm=s=>String(s??'').normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase().trim();
@@ -50,3 +52,5 @@ for(const id of ['exportOpen','tableExport'])$(id).onclick=()=>$('exportDialog')
 $('restoreBase').onclick=async()=>{book=window.FCU_INITIAL;original=window.FCU_ORIGINAL;try{await db('delete')}catch{}setup();$('storageState').textContent='Base incluída no site';$('importStatus').textContent='Base original restaurada.';toast('Base incluída no site restaurada.')};
 function tick(){const d=new Date();$('clock').textContent=d.toLocaleTimeString('pt-BR',{timeZone:'America/Sao_Paulo'});$('today').textContent=d.toLocaleDateString('pt-BR',{timeZone:'America/Sao_Paulo'});$('clock').dateTime=d.toISOString()}tick();setInterval(tick,1000);setup();db('get').then(saved=>{if(saved?.book){book=saved.book;original=saved.original;setup();$('storageState').textContent='Base importada • salva neste navegador'}}).catch(()=>{});
 window.FCU_TEST={get:()=>({book,base,filtered,selected,tableRows,matchedProjects}),dateISO,display};
+
+}).catch(e=>{console.error(e);document.body.innerHTML='<main style="font-family:Arial,sans-serif;padding:32px"><h1>Não foi possível carregar a base FCU.</h1><p>Atualize a página. Se o problema persistir, verifique a publicação do arquivo de dados.</p></main>';});
