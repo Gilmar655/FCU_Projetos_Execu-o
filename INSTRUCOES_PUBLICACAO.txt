@@ -1,0 +1,11 @@
+ATUALIZAÇÃO FCU - 30/09/2026
+
+1) Extraia o ZIP.
+2) Abra o repositório GitHub: Gilmar655/FCU_Projetos_Execu-o
+3) Envie os arquivos desta pasta para a raiz do repositório.
+4) Confirme a substituição de index.html, data.js, README.md e LEIA-ME.html.
+5) NÃO apague app.js, styles.css, excel.js, jszip.min.js, enel-brasil.png e JSZip-LICENSE.md que já existem no repositório.
+6) Envie também o novo arquivo excel-patch.js deste pacote.
+7) Aguarde o GitHub Pages atualizar.
+
+Site: https://gilmar655.github.io/FCU_Projetos_Execu-o/
