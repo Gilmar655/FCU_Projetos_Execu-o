@@ -1,33 +1,23 @@
-# Atualização FCU Projetos Execução — 30/09/2026
+# FCU Projetos Execução — atualização 03/10/2026
 
-Pacote preparado para atualizar o repositório existente **Gilmar655/FCU_Projetos_Execu-o**.
+Site: https://gilmar655.github.io/FCU_Projetos_Execu-o/
 
-## Base incorporada
+## Base publicada
 
-- Arquivo fonte: `FCU -execução_30_09_2026(1).csv`
-- Referência: **30/09/2026**
-- Registros: **24,911**
-- Colunas: **40**
-- Projetos distintos: **10.093**
-- Status SIGEO: Executado 10.873; ExecutadoParcial 2.797; Cancelado 7.262; LiberadoExecucao 3.168; LiberadoDocumentacao 602; PendenteAprovacao 209.
-- Período encontrado em `Data_Programação`: **01/01/2026 a 09/12/2026**.
+- Fonte: `FCU - Ferramenta de Controle Unificado - 03_10_2026_(1).xlsx`.
+- Aba: `FCU - Ferramenta de Controle Un`.
+- Registros: **25.251**. Colunas: **40**. Projetos distintos: **10.178**.
+- Período de programação: **01/01/2026 a 09/12/2026**.
+- Status SIGEO: Executado: 11.027; Cancelado: 7.385; LiberadoExecucao: 3.175; ExecutadoParcial: 2.828; LiberadoDocumentacao: 610; PendenteAprovacao: 226.
 
-## Como publicar no GitHub Pages
+Todos os registros, inclusive repetições de projetos, e todas as colunas foram preservados. Os filtros, gráficos e tabela consultam a base incorporada em `data.js`. Datas são convertidas para ISO e horários para frações do dia com os formatos originais, sem alterar os valores da fonte. Campos vazios permanecem vazios.
 
-1. Extraia este ZIP.
-2. No repositório `Gilmar655/FCU_Projetos_Execu-o`, envie os arquivos deste pacote para a **raiz** do repositório e confirme a substituição de `index.html`, `data.js`, `README.md` e `LEIA-ME.html`.
-3. **Mantenha os arquivos já existentes** `app.js`, `styles.css`, `excel.js`, `jszip.min.js`, `enel-brasil.png` e `JSZip-LICENSE.md`; envie também o novo `excel-patch.js` deste pacote.
-4. O `index.html` deste pacote foi ajustado para carregar `jszip.min.js` e `enel-brasil.png` diretamente da raiz, de acordo com a estrutura atual do repositório.
-5. Após o commit, aguarde o GitHub Pages atualizar e acesse: https://gilmar655.github.io/FCU_Projetos_Execu-o/
+`FCU_Base_Original.xlsx` é uma cópia exata do Excel fornecido. O botão **Excel completo** baixa esse arquivo com sua formatação original. Importações feitas pelo usuário continuam locais ao navegador.
 
-## Arquivos deste pacote
+SHA-256 do Excel original: `05b88fcf957a80a8c987d8e01f26ca0dd1f90a66070a9045a75e6536f53b4556`.
 
-- `data.js` — base de 30/09/2026 incorporada ao site.
-- `index.html` — página principal ajustada à estrutura atual do repositório.
-- `excel-patch.js` — compatibilidade para importar CSV UTF-16/tabulado diretamente pelo painel.
-- `FCU -execução_30_09_2026(1).csv` — cópia da base fonte.
-- `.nojekyll` — evita processamento Jekyll desnecessário.
-- `LEIA-ME.html` — instruções rápidas de publicação.
-- `README.md` — este documento.
+## Publicação
 
-Observação: o CSV original está em **UTF-16 LE** e usa **tabulação** como separador. O `data.js` já foi gerado diretamente dessa base, portanto a publicação não depende da leitura do CSV pelo navegador.
+A base é publicada no GitHub Pages pela branch `main` do repositório `Gilmar655/FCU_Projetos_Execu-o`. Para atualizar todos os visitantes, publique o novo `data.js` e substitua `FCU_Base_Original.xlsx` pela mesma fonte. Atualize também a referência da base e os parâmetros de versão em `index.html`.
+
+O CSV de 30/09/2026 existente no repositório é uma fonte histórica e não alimenta a consulta atual.
