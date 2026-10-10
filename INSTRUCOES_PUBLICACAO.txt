@@ -1,4 +1,4 @@
-ATUALIZAÇÃO FCU - 03/10/2026
+ATUALIZAÇÃO FCU - 10/10/2026
 
 1) Extraia o ZIP.
 2) Abra o repositório GitHub: Gilmar655/FCU_Projetos_Execu-o

@@ -1,20 +1,20 @@
-# FCU Projetos Execução — atualização 03/10/2026
+# FCU Projetos Execução — atualização 10/10/2026
 
 Site: https://gilmar655.github.io/FCU_Projetos_Execu-o/
 
 ## Base publicada
 
-- Fonte: `FCU - Ferramenta de Controle Unificado - 03_10_2026_(1).xlsx`.
-- Aba: `FCU - Ferramenta de Controle Un`.
-- Registros: **25.251**. Colunas: **40**. Projetos distintos: **10.178**.
+- Fonte: `FCU_EXECUÇÃO_10-10-2026.xlsx`.
+- Aba: `FCU - Ferramenta execução_10_10`.
+- Registros: **25.960**. Colunas: **40**. Projetos distintos: **10.448**.
 - Período de programação: **01/01/2026 a 09/12/2026**.
-- Status SIGEO: Executado: 11.027; Cancelado: 7.385; LiberadoExecucao: 3.175; ExecutadoParcial: 2.828; LiberadoDocumentacao: 610; PendenteAprovacao: 226.
+- Status SIGEO: Executado: 11.328; Cancelado: 7.546; LiberadoExecucao: 3.432; LiberadoDocumentacao: 548; ExecutadoParcial: 2.886; PendenteAprovacao: 220.
 
 Todos os registros, inclusive repetições de projetos, e todas as colunas foram preservados. Os filtros, gráficos e tabela consultam a base incorporada em `data.js`. Datas são convertidas para ISO e horários para frações do dia com os formatos originais, sem alterar os valores da fonte. Campos vazios permanecem vazios.
 
 `FCU_Base_Original.xlsx` é uma cópia exata do Excel fornecido. O botão **Excel completo** baixa esse arquivo com sua formatação original. Importações feitas pelo usuário continuam locais ao navegador.
 
-SHA-256 do Excel original: `05b88fcf957a80a8c987d8e01f26ca0dd1f90a66070a9045a75e6536f53b4556`.
+SHA-256 do Excel original: `9954e7009b8c2ae63e483d87f188bd0a00895e04e7982a32de72101eb602d0d5`.
 
 ## Publicação
 
