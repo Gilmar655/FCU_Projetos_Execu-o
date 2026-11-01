@@ -1,23 +1,35 @@
-# FCU Projetos Execução — atualização 10/10/2026
+# FCU Projetos Execução — atualização de 31/10/2026
 
 Site: https://gilmar655.github.io/FCU_Projetos_Execu-o/
 
-## Base publicada
+## Dados publicados
 
-- Fonte: `FCU_EXECUÇÃO_10-10-2026.xlsx`.
-- Aba: `FCU - Ferramenta execução_10_10`.
-- Registros: **25.960**. Colunas: **40**. Projetos distintos: **10.448**.
-- Período de programação: **01/01/2026 a 09/12/2026**.
-- Status SIGEO: Executado: 11.328; Cancelado: 7.546; LiberadoExecucao: 3.432; LiberadoDocumentacao: 548; ExecutadoParcial: 2.886; PendenteAprovacao: 220.
+- Fonte: `FCU - Ferramenta de Controle Unificado - 2026_.xlsx`.
+- 27.690 registros de programação, 11.058 projetos e 40 colunas originais preservadas.
+- Período disponível: 01/01/2026 a 13/12/2026, incluindo programações futuras.
+- 4.809 projetos com localização; 6.249 sem localização suficiente nos arquivos fornecidos.
+- 13.864 registros com links de localização: 11.859 pelas coordenadas da FCU e 2.005 pelo código exato do equipamento da base Buscape.
 
-Todos os registros, inclusive repetições de projetos, e todas as colunas foram preservados. Os filtros, gráficos e tabela consultam a base incorporada em `data.js`. Datas são convertidas para ISO e horários para frações do dia com os formatos originais, sem alterar os valores da fonte. Campos vazios permanecem vazios.
+## Como consultar
 
-`FCU_Base_Original.xlsx` é uma cópia exata do Excel fornecido. O botão **Excel completo** baixa esse arquivo com sua formatação original. Importações feitas pelo usuário continuam locais ao navegador.
+O painel abre na aba **Resumo Projetos**, com uma linha por projeto e a coluna **Qtd Programações**. Clique no código do projeto para consultar todas as suas programações, em ordem cronológica, e abrir Maps ou Waze. O histórico da janela é completo e não é reduzido pelos filtros do painel. É possível exportar o histórico individual para Excel.
 
-SHA-256 do Excel original: `9954e7009b8c2ae63e483d87f188bd0a00895e04e7982a32de72101eb602d0d5`.
+As abas da base completa e do histórico detalhado também estão disponíveis, com busca, filtros e paginação. O botão **Excel completo** baixa `FCU_Projetos_Atualizado_31_10_2026.xlsx`, com links clicáveis, contagens e atalhos internos para o histórico.
 
-## Publicação
+## Critérios e limites
 
-A base é publicada no GitHub Pages pela branch `main` do repositório `Gilmar655/FCU_Projetos_Execu-o`. Para atualizar todos os visitantes, publique o novo `data.js` e substitua `FCU_Base_Original.xlsx` pela mesma fonte. Atualize também a referência da base e os parâmetros de versão em `index.html`.
+A contagem considera cada registro de programação do arquivo FCU, incluindo cancelados, parciais, pendentes e futuros. A combinação projeto + ordem SIGEO + data + horário inicial/final + intervenção foi conferida: não há duplicatas dessa chave na base atual. Ordens vazias não são excluídas. A contagem não representa o número de execuções concluídas.
 
-O CSV de 30/09/2026 existente no repositório é uma fonte histórica e não alimenta a consulta atual.
+As 40 colunas de origem permanecem intactas. As coordenadas utilizadas nas novas colunas não substituem Latitude/Longitude originais. A primeira escolha é o par de coordenadas da FCU; quando ausente, o equipamento `local_inst` é procurado no cadastro Buscape. Não foram utilizadas coordenadas aproximadas pelo circuito nem pesquisas genéricas pelo número do projeto. Sem correspondência confiável, o projeto aparece como **Localização não encontrada**.
+
+O arquivo `Equipamentos_Buscape_Links.xlsx` é uma apresentação com links da mesma base de equipamentos. A extração utiliza as coordenadas da base `Equipamentos_Buscape (1).xlsx`. O cadastro integral de equipamentos não é publicado no site: apenas os dados vinculados aos projetos são incluídos.
+
+No Excel, o resumo calcula a quantidade com `COUNTIFS` sobre o bloco correspondente do histórico. A coluna de quantidade da base referencia o resumo. O histórico está organizado por projeto, data, horário e ordem. Para incorporar novos registros, regenere as três abas ou atualize também os blocos de histórico e as fórmulas; somente editar uma data não cria nova programação. Use os filtros de tabela para consultar e os links “Ver histórico” para ir ao bloco do projeto.
+
+O “último status” é o status do registro com maior data de programação, que pode ser uma programação futura. A fonte não possui um horário de atualização do status.
+
+## Atualização e publicação
+
+`data.js` contém as três abas compactadas, sem depender de serviços externos. `app.js` monta os indicadores e o histórico. `excel.js` e `jszip.min.js` permitem importação e exportação local. A base importada no navegador vale apenas para aquele navegador até ser publicada no GitHub.
+
+Ao publicar uma nova base, mantenha `data.js` e o Excel completo da mesma atualização, atualize a versão dos arquivos no `index.html` e verifique o GitHub Pages na branch `main`. A publicação atual inclui todas as programações da fonte de 31/10/2026, sem agregar bases antigas que poderiam repetir eventos. Os arquivos históricos anteriores no repositório não alimentam a consulta atual.

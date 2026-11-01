@@ -1,11 +1,13 @@
-ATUALIZAÇÃO FCU - 10/10/2026
+ATUALIZAÇÃO FCU — 31/10/2026
 
-1) Extraia o ZIP.
-2) Abra o repositório GitHub: Gilmar655/FCU_Projetos_Execu-o
-3) Envie os arquivos desta pasta para a raiz do repositório.
-4) Confirme a substituição de index.html, data.js, app.js, FCU_Base_Original.xlsx, README.md e LEIA-ME.html.
-5) NÃO apague styles.css, excel.js, jszip.min.js, enel-brasil.png e JSZip-LICENSE.md que já existem no repositório.
-6) Envie também o novo arquivo excel-patch.js deste pacote.
-7) Aguarde o GitHub Pages atualizar.
+1. Extraia o ZIP.
+2. Publique os arquivos da pasta FCU_Projetos_Execucao na raiz do repositório Gilmar655/FCU_Projetos_Execu-o.
+3. Substitua os arquivos de mesmo nome. Preserve os demais arquivos históricos do repositório.
+4. Aguarde a conclusão do GitHub Pages.
+
+Dados: 27.690 programações; 11.058 projetos; 4.809 com localização.
+Excel completo: FCU_Projetos_Atualizado_31_10_2026.xlsx.
+Consulta: clique no código do projeto para abrir o histórico.
+Detalhes do método no README.md.
 
 Site: https://gilmar655.github.io/FCU_Projetos_Execu-o/
